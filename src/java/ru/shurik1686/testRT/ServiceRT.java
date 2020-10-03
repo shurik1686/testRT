@@ -8,7 +8,6 @@ package ru.shurik1686.testRT;
 import ru.shurik1686.testRT.model.Colors;
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -55,11 +54,15 @@ public class ServiceRT implements AutoCloseable {
             System.out.println(e.getMessage());
         }
     }
-/*
-    public static JSONArray getJSONtest() {
-        return new JSONArray(Arrays.asList(new Colors(1, "red"), new Colors(2, "Orange"), new Colors(3, "Yellow")));
+
+    public static JSONArray getJSON() {
+        return new JSONArray(Arrays.asList(new Colors("01", "red"), new Colors("02", "Orange"), new Colors("03", "Yellow"),
+                                           new Colors("04", "Green"), new Colors("05", "Blue"), new Colors("06", "Dark blue"),
+                                           new Colors("07", "Violet"), new Colors("08", "Green"), new Colors("09", "Orange")
+        ));
     }
-*/
+
+    /*
     public static JSONArray getJSON() {
         List rez = new LinkedList();
         try (ServiceRT colorService = new ServiceRT()) {
@@ -82,7 +85,7 @@ public class ServiceRT implements AutoCloseable {
         }
         return new JSONArray(rez);
     }
-
+*/
     public Connection getConnection() throws SQLException {
         //String url = "jdbc:oracle:thin:@" + server + ":" + port + ":" + sn;
         String url = "jdbc:sqlserver://localhost;databaseName=test";
@@ -113,6 +116,7 @@ public class ServiceRT implements AutoCloseable {
         preparedStatement.setString(1, in);
         return preparedStatement.executeQuery();
     }
+    
     // Задание 2.
     public String testCallableStatement(String sql, int in) throws SQLException {
         CallableStatement callableStatement
