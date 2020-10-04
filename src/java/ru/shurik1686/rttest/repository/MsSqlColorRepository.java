@@ -17,7 +17,7 @@ import ru.shurik1686.rttest.model.Colors;
 
 /**
  *
- * @author zayc
+ * @author pop_av
  */
 public class MsSqlColorRepository implements TRRepository {
 
@@ -72,7 +72,7 @@ public class MsSqlColorRepository implements TRRepository {
     public Connection getConnection() throws SQLException {
         String url = "jdbc:sqlserver://" + server + ";databaseName=" + sn;
         String user = "sa";
-        String passwd = "Pkj,ysq";
+        String passwd = "sa";
         return DriverManager.getConnection(url, user, passwd);
     }
 

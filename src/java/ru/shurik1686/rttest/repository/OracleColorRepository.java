@@ -17,7 +17,7 @@ import ru.shurik1686.rttest.model.Colors;
 
 /**
  *
- * @author zayc
+ * @author pop_av
  */
 public class OracleColorRepository implements TRRepository {
 
@@ -69,6 +69,7 @@ public class OracleColorRepository implements TRRepository {
         return rez;
     }
 
+    @Override
     public Connection getConnection() throws SQLException {
         String url = "jdbc:oracle:thin:@" + server + ":" + port + ":" + sn;
         String user = "admin";

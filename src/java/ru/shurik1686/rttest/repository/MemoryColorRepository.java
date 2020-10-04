@@ -13,7 +13,7 @@ import ru.shurik1686.rttest.model.Colors;
 
 /**
  *
- * @author zayc
+ * @author pop_av
  */
 public class MemoryColorRepository implements TRRepository {
 
