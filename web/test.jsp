@@ -4,10 +4,10 @@
     Author     : pop_av
 --%>
 
-<%@page import="ru.shurik1686.testRT.ServiceRT"%>
+<%@page import="ru.shurik1686.rttest.service.RTService"%>
 <%@ page language="java" import="org.json.JSONArray" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% JSONArray arrayObj = ServiceRT.getJSON(); %>
+<% JSONArray arrayObj = new RTService().getJSON(); %>
 <!DOCTYPE html>
 <html>
     <head>

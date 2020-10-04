@@ -1,4 +1,4 @@
-package ru.shurik1686.testRT;
+package ru.shurik1686.rttest.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,9 +10,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author pop_av
  */
-public class TestServlet extends HttpServlet {
-
-
+public class RTController extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -26,7 +24,7 @@ public class TestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute("name", "Тестовое задание JavaDev v7");                            
+        request.setAttribute("name", "Тестовое задание JavaDev v7");
         request.getRequestDispatcher("/test.jsp").forward(request, response);
     }
 

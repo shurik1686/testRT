@@ -1,4 +1,4 @@
-package ru.shurik1686.testRT.model;
+package ru.shurik1686.rttest.model;
 
 /**
  *
@@ -7,10 +7,10 @@ package ru.shurik1686.testRT.model;
 public class Colors {
 
     // Поле color_number
-    String colorNumder;
+    private final String colorNumder;
 
     // Поле name
-    String nameColor;
+    private final String nameColor;
 
     public Colors(String colorNumder, String nameColor) {
         this.colorNumder = colorNumder;
@@ -21,16 +21,8 @@ public class Colors {
         return colorNumder;
     }
 
-    public void setColorNumder(String colorNumder) {
-        this.colorNumder = colorNumder;
-    }
-
     public String getNameColor() {
         return nameColor;
-    }
-
-    public void setNameColor(String nameColor) {
-        this.nameColor = nameColor;
     }
 
 }
